@@ -1,9 +1,9 @@
 import ProductData from './productData.js';
-import { getParams } from './util.js';
+import { getParams }  from './utils.js';
 const dataSource = new ProductData('tents');
 console.log(dataSource.getData());
 
-const productId = getParam('product');
+const productId = getParams('product');
 
 console.log(dataSource.findProductById(productId));
 
