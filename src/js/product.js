@@ -1,5 +1,7 @@
 import ProductData from './productData.js';
 import { getParams }  from './utils.js';
+
+
 const dataSource = new ProductData('tents');
 console.log(dataSource.getData());
 
@@ -11,7 +13,9 @@ let products = [];
 
 
 function setLocalStorage(key, data) {
+
   localStorage.setItem(key, JSON.stringify(data));
+
 }
 
 
@@ -22,6 +26,10 @@ function setLocalStorage(key, data) {
 
 // add to cart button event handler
 function addToCart(e) {
+  
   setLocalStorage("so-cart", product);
 }
+
+
+document.querySelector("#addToCart").addEventListener("click", addToCart)
 
