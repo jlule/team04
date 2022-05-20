@@ -30,7 +30,8 @@ function setLocalStorage(key, data) {
 // add to cart button event handler
 function addToCart(e) {
   
-  setLocalStorage("so-cart", product);
+  setLocalStorage(e, product);
+
 }
 
 
