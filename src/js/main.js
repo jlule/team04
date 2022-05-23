@@ -13,3 +13,26 @@ const product_list = new ProductList('tents', product_data, listElement)
 product_list.init();
 
 console.log(product_list)
+
+
+// PopUp for the newsletter...
+
+
+let closeButton = document.querySelector("#exit-banner")
+
+function popUp() {
+
+    document.querySelector("#pop-up-box").style.display = "block";
+
+}
+
+function closePopUp(){
+
+    document.querySelector("#pop-up-box").style.display = "none";
+
+}
+
+
+closeButton.addEventListener("click", closePopUp)
+window.onload = popUp() 
+

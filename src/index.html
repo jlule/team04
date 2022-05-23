@@ -21,9 +21,12 @@
     </template>
   </head>
   <body>
-    <header class="divider" id="main-header">
-     
-    </header>
+    <div id="pop-up-box">
+      <button id="exit-banner">X</button>
+      <h1>Register for a chance to win in our giveaway!</h1>
+      <a id='register-button' href="/src/index.html">Register</a>
+    </div>
+    <header class="divider" id="main-header"></header>
     <main class="divider">
       <div class="hero">
         <img
@@ -93,6 +96,14 @@
             >
           </li>
         </ul>
+      </section>
+      <section id="newsletter-section">
+        <h1 id="newsletter-header">Sign up for the newsletter:</h1>
+        <form action="/action_page.php" id="newsletter">
+          <label for="email">E-mail:</label><br><br>
+          <input type="text" id="email" name="email" placeholder="jon@email.com"><br><br>
+          <input id="newsletter-button" type="submit" value="Submit">
+        </form> 
       </section>
     </main>
     <footer id="main-footer"></footer>

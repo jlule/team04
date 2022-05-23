@@ -220,3 +220,89 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+
+
+
+/* NEWSLETTER CSS =========================================================== */
+
+#newsletter-header{
+  text-align: center;
+}
+
+
+#newsletter{
+
+  display: inline-block;
+  margin: auto;
+  border: solid #F0A868;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+
+}
+
+#newsletter-button{
+  padding: 0.5em 2em;
+  background-color: var(--secondary-color);
+  color: white;
+  margin: auto;
+  display: block;
+  border: 0;
+  font-size: var(--large-font);
+  cursor: pointer;
+}
+
+#newsletter-button:hover{
+  background-color: #f0a868;
+}
+
+#newsletter-section{
+  text-align: center;
+}
+
+
+/* CALL TO ACTION MODAL BOX ================================================================= */
+
+
+
+#pop-up-box{
+  display: none;
+  border: solid black;
+  background-color: #F0A868;
+  z-index: 1;
+  text-align: center;
+  width: 600px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+#exit-banner{
+  color: #aaa;
+  display: block;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: center;
+}
+
+#register-button{
+  
+  border: solid black;
+  padding: 10px;
+  font-size: larger;
+  background-color: aliceblue;
+  text-decoration: none;
+
+}
+
+#register-button:hover{
+
+  background-color: #A4B8C5;
+
+}
