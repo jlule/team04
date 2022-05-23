@@ -1,5 +1,8 @@
 import ProductData from './productData.js'
 import ProductList from './productList.js'
+import { loadHeaderFooter } from './utils.js'
+
+loadHeaderFooter();
 
 const product_data = new ProductData('tents')
 console.log(product_data)

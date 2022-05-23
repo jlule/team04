@@ -1,3 +1,6 @@
+import { loadHeaderFooter} from './utils.js';
+loadHeaderFooter();
+
 function getLocalStorage(key) {
 
   // Get all items from storage and put into an array and then return array.
