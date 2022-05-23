@@ -11,13 +11,13 @@ export default class ProductDetails {
     this.product = await this.dataSource.findProductById(this.productId);
     document.querySelector('main').innerHTML = this.renderProductDetails();
     // add listener to Add to Cart button
-    document.getElementById('addToCart')
-            .addEventListener('click', this.addToCart.bind(this));
+    document.getElementById('addToCart').addEventListener('click', this.addToCart.bind(this));
   }
-  addToCart() {
+  addToCart(e) {
     
-    setLocalStorage('so-cart', this.product);
+    setLocalStorage(this.productId, this.product);
   }
+
   renderProductDetails() {
     return `<section class="product-detail"> <h3>${this.product.Brand.Name}</h3>
     <h2 class="divider">${this.product.NameWithoutBrand}</h2>

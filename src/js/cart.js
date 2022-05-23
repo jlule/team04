@@ -1,12 +1,20 @@
 function getLocalStorage(key) {
+
+  // Get all items from storage and put into an array and then return array.
+
   return JSON.parse(localStorage.getItem(key));
+
+
+
 }
 
 
 function getCartContents() {
   let markup = "";
-  const cartItems = getLocalStorage("so-cart");
-  const htmlItems = cartItems.map((item) => renderCartItem(item));
+  const cartItem = getLocalStorage(localStorage.key(0));
+  const item = [];
+  item.push(cartItem)
+  const htmlItems = item.map((item) => renderCartItem(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
   // document.querySelector(".product-list").innerHTML = renderCartItem(cartItems);
 }
@@ -27,6 +35,7 @@ function renderCartItem(item) {
   <p class="cart-card__quantity">qty: 1</p>
   <p class="cart-card__price">$${item.FinalPrice}</p>
 </li>`;
+
   console.log(newItem);
   return newItem;
 }
