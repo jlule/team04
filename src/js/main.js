@@ -15,7 +15,7 @@ product_list.init();
 console.log(product_list)
 
 
-// PopUp for the newsletter...
+// PopUp for the newsletter ==================================================================================================
 
 
 let closeButton = document.querySelector("#exit-banner")
@@ -36,3 +36,4 @@ function closePopUp(){
 closeButton.addEventListener("click", closePopUp)
 window.onload = popUp() 
 
+//  ===========================================================================================================================
