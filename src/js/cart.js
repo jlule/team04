@@ -11,6 +11,7 @@ function getLocalStorage(key) {
 
 }
 
+
 function getCartContents() {
   let markup = "";
   const cartItem = getLocalStorage(localStorage.key(0));
@@ -20,6 +21,7 @@ function getCartContents() {
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
   // document.querySelector(".product-list").innerHTML = renderCartItem(cartItems);
 }
+
 
 function renderCartItem(item) {
   const newItem = `<li class="cart-card divider">
@@ -40,5 +42,6 @@ function renderCartItem(item) {
   console.log(newItem);
   return newItem;
 }
+
 
 getCartContents();
