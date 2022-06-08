@@ -220,3 +220,14 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 30px;
+}
+
+.no-decor{
+  text-decoration: none;
+  color: black;
+}

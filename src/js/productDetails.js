@@ -1,4 +1,6 @@
-import { setLocalStorage } from './utils.js';
+import { setLocalStorage, getLocalStorage, loadHeaderFooter } from './utils.js';
+
+loadHeaderFooter();
 
 export default class ProductDetails {
   constructor(productId, dataSource){
@@ -15,7 +17,18 @@ export default class ProductDetails {
   }
   addToCart(e) {
     
-    setLocalStorage(this.productId, this.product);
+    // setLocalStorage(this.productId, this.product);
+
+    // Instructors solution pasted to continue current project. Go over later.
+    // to fix the cart we need to get anything that is in the cart already.
+    let cartContents = getLocalStorage('so-cart');
+    //check to see if there was anything there
+    if(!cartContents){
+      cartContents = [];
+    }
+    // then add the current product to the list
+    cartContents.push(this.product);
+    setLocalStorage('so-cart', cartContents);
   }
 
   renderProductDetails() {
@@ -23,7 +36,7 @@ export default class ProductDetails {
     <h2 class="divider">${this.product.NameWithoutBrand}</h2>
     <img
       class="divider"
-      src="${this.product.Image}"
+      src="${this.product.Images.PrimaryLarge}"
       alt="${this.product.NameWithoutBrand}"
     />
     <p class="product-card__price">$${this.product.FinalPrice}</p>

@@ -1,11 +1,10 @@
 import ProductData from './productData.js';
 import ProductDetails from './productDetails.js';
-import { getParams }  from './utils.js';
+import { getParam }  from './utils.js';
 
 
-const dataSource = new ProductData('tents');
-console.log(dataSource.getData());
-const productId = getParams('product');
+const dataSource = new ProductData();
+const productId = getParam('product');
 const product = new ProductDetails(productId, dataSource);
 product.init();
 
@@ -13,8 +12,6 @@ product.init();
 console.log(dataSource.findProductById(productId));
 
 let products = [];
-
-
 function setLocalStorage(key, data) {
 
   localStorage.setItem(key, JSON.stringify(data));
